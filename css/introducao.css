@@ -1,6 +1,7 @@
 .introducao-bg{
   background: #000000;
   color: #ffffff;
+  box-shadow: inset 0 -120px #ffffff;
 }
 .introducao{
   display: grid;
@@ -13,7 +14,11 @@
 }
 .introducao-conteudo{
   align-self: end;
-  padding-bottom: 80px;
+  padding-bottom: 200px;
+}
+.introducao img{
+  height: 100%;
+  object-fit: cover;
 }
 .introducao h1{
   margin-bottom: 32px;
