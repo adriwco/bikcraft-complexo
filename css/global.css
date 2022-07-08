@@ -11,4 +11,9 @@ ul{
 a{
   text-decoration: none;
   display: inline-block;
+  color: inherit;
+}
+img{
+  display: block;
+  max-width: 100%;
 }
