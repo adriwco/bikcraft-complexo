@@ -1,5 +1,5 @@
 .header-bg{
-  background-color: #000000;
+  background-color: var(--cor-12);
 }
 .header{
   display: flex;
@@ -20,7 +20,6 @@
   gap: 40px;
 }
 .header-menu a{
-  color: #ffffff;
   padding: 16px 0px;
   font-size: 18px;
   position: relative;
@@ -32,7 +31,7 @@
   display: block;
   height: 2px;
   width: 0%;
-  background: #ffffff;
+  background: var(--cor-0);
   margin-top: 4px;
   transition: 0.3s;
   position: absolute;
@@ -45,12 +44,12 @@
     gap: 20px;
   }
   .header-menu a{
-    background-color: #111111;
+    background-color: var(--cor-11);
     padding: 10px 16px;   
     border-radius: 4px;
   }
   .header-menu a:hover{
-    background-color: #2e2e2e;
+    background-color: var(--cor-10);
   }
   .header-menu a::after{
     display: none;
