@@ -17,7 +17,7 @@
 .header-menu a{
   padding: 16px 0px;
   position: relative;
-  font-weight: bold;
+  font-weight: 600;
 }
 .header-menu a::after{
   content: "";
@@ -57,4 +57,16 @@
     padding: 8px 12px;
   }
 
+}
+@media (max-width: 500px){
+  .header{
+    justify-content: center;
+  }
+  .header a[href="./"]{
+    padding-bottom: 20px;
+    padding-left: 20px;
+  }
+  .header-menu{
+    justify-content: center;
+  }
 }
