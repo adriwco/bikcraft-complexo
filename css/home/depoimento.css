@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   background-color: var(--cor-p1);
-  overflow: hidden;
 }
 .depoimento img{
   width: 100%;
@@ -13,6 +12,7 @@
 .depoimento-conteudo{
   padding: 40px 40px 80px 80px;
   align-self: end;
+  overflow: hidden;
 }
 .depoimento-conteudo p{
   max-width: 32ch;
@@ -34,6 +34,11 @@
 }
 .depoimento p::after{
   content: "”";
+}
+@media (min-width: 1200px) {
+  .depoimento img {
+    max-height: 520px;
+  }
 }
 @media (max-width: 800px){
   .depoimento{
