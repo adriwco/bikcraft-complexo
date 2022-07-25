@@ -60,3 +60,24 @@
   width: 24px;
   margin-right: 8px;
 }
+@media (max-width: 800px){
+  .bicicletas{
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+@media (max-width: 600px){
+  .bicicletas-conteudo{
+    grid-template-columns: 1fr;
+  }
+  .bicicletas-conteudo ul{
+    font-size: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+  }
+  .bicicletas-conteudo a{
+    place-self: start;
+  }
+}
