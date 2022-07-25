@@ -26,6 +26,7 @@
 .bicicletas-conteudo{
   display: grid;
   grid-template-columns: 1fr auto;
+  align-content: start;
 }
 .bicicletas-conteudo h2,
 .bicicletas-conteudo p{
