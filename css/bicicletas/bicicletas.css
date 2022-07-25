@@ -62,6 +62,9 @@
   margin-right: 8px;
 }
 @media (max-width: 800px){
+  .bicicletas-bg{
+    background: linear-gradient(to right, var(--cor-11) 30%, var(--cor-11) 0%);
+  }
   .bicicletas{
     grid-template-columns: 1fr;
     gap: 20px;
