@@ -1,5 +1,5 @@
 .bicicletas-bg{
-  background: var(--cor-11);
+  background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
 }
 .bicicletas{
   display: grid;
