@@ -49,6 +49,11 @@
   }
 }
 @media (max-width: 600px){
+  .header{
+    justify-content: center;
+    flex-direction: column;
+    gap: 18px;
+  }
   .header-menu{
     gap: 12px;
   }
@@ -59,9 +64,6 @@
 
 }
 @media (max-width: 500px){
-  .header{
-    justify-content: center;
-  }
   .header a[href="./"]{
     padding-bottom: 20px;
     padding-left: 20px;
