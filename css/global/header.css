@@ -58,17 +58,13 @@
     gap: 12px;
   }
   .header-menu a{
-    font-size: .9rem;
+    font-size: .8rem;
     padding: 8px 12px;
   }
-
 }
 @media (max-width: 500px){
   .header a[href="./"]{
     padding-bottom: 20px;
     padding-left: 20px;
-  }
-  .header-menu{
-    justify-content: center;
   }
 }
