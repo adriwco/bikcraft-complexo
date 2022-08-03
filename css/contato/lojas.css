@@ -9,7 +9,13 @@
   grid-column: 1/-1;
   margin-bottom: 60px;
 }
-.lojas img{
+.iframe-googleMaps{
+  min-height: 196px;
+  max-height: 260px;
+}
+.iframe-googleMaps iframe{
+  width: 100%;
+  height: 260px;
   border-radius: 4px 4px 0 0;
 }
 .lojas-item{
