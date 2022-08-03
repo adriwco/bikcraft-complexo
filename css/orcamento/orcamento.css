@@ -1,0 +1,6 @@
+#orcamento{
+  background: linear-gradient(var(--cor-11) 500px, var(--cor-1) 0px);
+}
+label{
+  color: var(--cor-6);
+}
