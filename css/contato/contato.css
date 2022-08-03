@@ -49,8 +49,8 @@
 }
 .contato-redes{
   display: flex;
-  gap: 20px;
-  padding-left: 28px;
+  gap: 15px;
+  padding-left: 25px;
 }
 @media (max-width: 800px){
   .contato{
