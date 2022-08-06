@@ -15,6 +15,7 @@
 .form input[type="email"],
 .form input[type="tel"],
 .form input[type="number"],
+.form select,
 .form textarea{
   font: 400 1rem/1.5 "Roboto", sans-serif;
   background: var(--cor-1);
@@ -28,11 +29,15 @@
 .form input[type="email"]:focus,
 .form input[type="tel"]:focus,
 .form input[type="number"]:focus,
+.form select:focus,
 .form textarea:focus{
   outline: none;
   border-color: var(--cor-p1);
   background: var(--cor-0);
   box-shadow: 0 0 0 2px #fea;
+}
+.required{
+  color: #ff0000;
 }
 @media(max-width: 600px){
   .form{
