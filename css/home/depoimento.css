@@ -13,6 +13,7 @@
   padding: 40px 40px 80px 80px;
   align-self: end;
   overflow: hidden;
+  background: url('../../img/dec/bottom-right-p.svg') no-repeat bottom 40px right 40px;
 }
 .depoimento-conteudo p{
   max-width: 32ch;

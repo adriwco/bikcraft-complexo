@@ -39,6 +39,9 @@
 .required{
   color: #ff0000;
 }
+option[value=""],[disabled] {
+  display: none;
+}
 @media(max-width: 600px){
   .form{
     grid-template-columns: 1fr;
