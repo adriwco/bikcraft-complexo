@@ -3,6 +3,7 @@
   --padding: 120px;
 }
 .vantagens{
+  background: url('../../img/dec/top-right.svg') no-repeat top 110px right 20px;
   padding-top: var(--padding);
   padding-bottom: var(--padding);
 }
@@ -20,6 +21,9 @@
 @media (max-width: 800px){
   .vantagens-bg{ 
     --padding: 60px;
+  }
+  .vantagens{ 
+    background: url('../../img/dec/top-right.svg') no-repeat top 60px right 20px;
   }
   .vantagens h2{
     margin-bottom: 40px;
