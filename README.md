@@ -1,5 +1,5 @@
 ## bikcraft-complexo
-🔸Projeto Final (Origamid) - Projeto em Andamento.
+🔸Projeto Final (Origamid) - Projeto em Andamento - Landing Page Development.
 ***
 #### 🔸Tecnologias sendo utilizadas:
 
