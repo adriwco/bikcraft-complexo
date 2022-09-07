@@ -56,3 +56,35 @@ galeria.forEach(eventosGaleria);
 // arrow funciton or "funçao flecha"  
 //  =>  : Isto é uma função lambda, ou como costuma ser chamada, função flecha. É uma função anônima com uma sintaxe mais simples. disponível desde EcmaScript 6. 
 // });
+
+// Validaçao formualario
+  //$("#cep").mask("00000-000")
+  //$("#cpf").mask("000.000.-00")
+  $(document).ready(function(){
+    $('input').bind('cut copy paste',function(e) {
+        e.preventDefault();
+    });
+  });
+  $("#telefone").mask("+0000000000009")
+  $("#telefone").blur(function (event) { 
+    if ($(this).val().includes('+351')) {
+      $("#telefone").mask("+000 000 000 0009")
+    } else{
+      if ($(this).val().length == 19) {
+        $("#telefone").mask("+00 (00) 00000-0009")
+      } else {
+        $("#telefone").mask("+00 (00) 0000-00009")
+      }
+    }
+  })
+
+  // Contador de caracteres
+  $(document).on("input", "#mensagem", function () {
+    const limite = 0;
+    const caracteresDigitados = $(this).val().length;
+    const caracteresRestantes = limite + caracteresDigitados;
+    $(".caracteres").text(caracteresRestantes);
+    if(limite == 90){
+      $(".carcteres")..
+    }
+  });

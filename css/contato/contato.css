@@ -52,6 +52,15 @@
   gap: 15px;
   padding-left: 25px;
 }
+.mensagem-contador{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.contador-msg{
+  font-size: .7rem;
+  font-weight: bolder;
+}
 @media (max-width: 800px){
   .contato{
     grid-template-columns: 1fr;

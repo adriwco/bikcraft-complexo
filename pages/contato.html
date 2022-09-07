@@ -76,8 +76,11 @@
             <input type="email" id="email" name="email" placeholder="contato@email.com" required>
           </div>
           <div class="col-2">
-            <label for="mensagem">Mensagem <span class="required">*</span></label>
-            <textarea name="mensagem" id="mensagem" rows="5" placeholder="O que você precisa?" required></textarea>
+            <div class="mensagem-contador">
+              <label for="mensagem">Mensagem <span class="required">*</span></label>
+              <div class="contador-msg">( <span class="caracteres">0</span> / 270 )</div>
+            </div>
+            <textarea name="mensagem" id="mensagem" maxlength="270" rows="5" placeholder="O que você precisa? (max. 270 caracteres)." required></textarea>
           </div>
           <button type="submit" class="botao col-2">Enviar Mensagem</button>
         </form>
@@ -162,6 +165,8 @@
       <p class="footer-copy font-2-m cor-6">Bikcraft © Alguns direitos reservados.</p>
     </div>
   </footer>
+  <script src="../../js/utils/jquery-3.5.1.min.js"></script>
+  <script src="../../js/utils/jquery.mask.min.js"></script>
   <script src="../js/script.js"></script>
 </body>
 
