@@ -52,31 +52,10 @@ function eventosGaleria(img){
 
 galeria.forEach(eventosGaleria);
 
-// galeria.forEach(() => {
-// arrow funciton or "funçao flecha"  
-//  =>  : Isto é uma função lambda, ou como costuma ser chamada, função flecha. É uma função anônima com uma sintaxe mais simples. disponível desde EcmaScript 6. 
-// });
-
-// Validaçao formualario
-  //$("#cep").mask("00000-000")
-  //$("#cpf").mask("000.000.-00")
-  $(document).ready(function(){
-    $('input').bind('cut copy paste',function(e) {
-        e.preventDefault();
-    });
-  });
-  $("#telefone").mask("+0000000000009")
-  $("#telefone").blur(function (event) { 
-    if ($(this).val().includes('+351')) {
-      $("#telefone").mask("+000 000 000 0009")
-    } else{
-      if ($(this).val().length == 19) {
-        $("#telefone").mask("+00 (00) 00000-0009")
-      } else {
-        $("#telefone").mask("+00 (00) 0000-00009")
-      }
-    }
-  })
+/* galeria.forEach(() => {
+ arrow funciton or "funçao flecha"  
+  =>  : Isto é uma função lambda, ou como costuma ser chamada, função flecha. É uma função anônima com uma sintaxe mais simples. disponível desde EcmaScript 6. 
+ }); */
 
   // Cor do contador de caracteres
   const contadorMsg = document.querySelector('.caracteres');
@@ -92,11 +71,32 @@ galeria.forEach(eventosGaleria);
     }
   }
 
-  // Contador de caracteres
-  $(document).on("input", "#mensagem", function () {
-    const limite = 0;
-    const caracteresDigitados = $(this).val().length;
-    const caracteresRestantes = limite + caracteresDigitados;
-    $(".caracteres").text(caracteresRestantes);
-    mudarCorContador(caracteresRestantes);
+  $(document).ready(function(){
+    // bloquear o crtl+c crtl+v
+    $('input').bind('cut copy paste',function(e) {
+        e.preventDefault();
+    });
+    // Validaçao formualarioç
+    $("#telefone").mask("+0000000000009")
+    $("#telefone").blur(function (event) { 
+      if ($(this).val().includes('+351')) {
+        $("#telefone").mask("+000 000 000 0009")
+      } else{
+        console.log($(this).val().length)
+        const numeroTef = $(this).val().length;
+        if ( numeroTef <= 18 && numeroTef != 14) {
+          $("#telefone").mask("+00 (00) 0000-00009")
+        } else {
+          $("#telefone").mask("+00 (00) 00000-0009")
+        }
+      }
+    })
+    // Contador de caracteres
+    $(document).on("input", "#mensagem", function () {
+      const limite = 0;
+      const caracteresDigitados = $(this).val().length;
+      const caracteresRestantes = limite + caracteresDigitados;
+      $(".caracteres").text(caracteresRestantes);
+      mudarCorContador(caracteresRestantes);
+    });
   });
