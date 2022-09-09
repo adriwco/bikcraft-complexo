@@ -78,13 +78,25 @@ galeria.forEach(eventosGaleria);
     }
   })
 
+  // Cor do contador de caracteres
+  const contadorMsg = document.querySelector('.caracteres');
+  function mudarCorContador(numero){
+    if(numero >= 100 && numero <= 149){
+      contadorMsg.style.color = "#999900";
+    }else if(numero >= 150 && numero <= 269){
+      contadorMsg.style.color = "#CC6600";
+    }else if(numero === 270){
+      contadorMsg.style.color = "#FF0000";
+    }else{
+      contadorMsg.style.color = "#000";
+    }
+  }
+
   // Contador de caracteres
   $(document).on("input", "#mensagem", function () {
     const limite = 0;
     const caracteresDigitados = $(this).val().length;
     const caracteresRestantes = limite + caracteresDigitados;
     $(".caracteres").text(caracteresRestantes);
-    if(limite == 90){
-      $(".carcteres")..
-    }
+    mudarCorContador(caracteresRestantes);
   });
