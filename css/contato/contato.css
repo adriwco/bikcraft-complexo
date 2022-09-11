@@ -60,6 +60,10 @@
 .contador-msg{
   font-size: .7rem;
   font-weight: bolder;
+  display: none;
+}
+.js .contador-msg{
+  display: block;
 }
 @media (max-width: 800px){
   .contato{
