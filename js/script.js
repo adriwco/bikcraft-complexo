@@ -1,7 +1,7 @@
 //Ativar links do menu
 const links = document.querySelectorAll('.header-menu a');
+const url = window.location.href;
 function ativarLink(link){
-  const url = window.location.href;
   const href = link.href;
   if(url.includes(href)){
     link.classList.add("ativo");
@@ -37,7 +37,6 @@ perguntas.forEach(eventosPerguntas);
 // Galeria de bicicleta
 const galeria = document.querySelectorAll('.bicicleta-imagens img');
 const galeriaContainer = document.querySelector('.bicicleta-imagens');
-
 function trocarImagem(event){
   const img = event.currentTarget;
   const media = window.matchMedia('(min-width: 1000px)').matches;
@@ -45,11 +44,9 @@ function trocarImagem(event){
     galeriaContainer.prepend(img); // remove o elemento e cola no primeiro lugar
   }
 }
-
 function eventosGaleria(img){
   img.addEventListener('click', trocarImagem)
 }
-
 galeria.forEach(eventosGaleria);
 
 /* galeria.forEach(() => {
@@ -71,32 +68,38 @@ galeria.forEach(eventosGaleria);
     }
   }
 
-  $(document).ready(function(){
-    // bloquear o crtl+c crtl+v
-    $('input').bind('cut copy paste',function(e) {
-        e.preventDefault();
-    });
-    // Validaçao formualarioç
-    $("#telefone").mask("+0000000000009")
-    $("#telefone").blur(function (event) { 
-      if ($(this).val().includes('+351')) {
-        $("#telefone").mask("+000 000 000 0009")
-      } else{
-        console.log($(this).val().length)
-        const numeroTef = $(this).val().length;
-        if ( numeroTef <= 18 && numeroTef != 14) {
-          $("#telefone").mask("+00 (00) 0000-00009")
-        } else {
-          $("#telefone").mask("+00 (00) 00000-0009")
+  if(url.includes('pages/contato.html') || url.includes('pages/orcamento.html')){
+    $(document).ready(function(){
+      // bloquear o crtl+c crtl+v
+      $('input').bind('cut copy paste',function(e) {
+          e.preventDefault();
+      });
+      // Validaçao formualarioç
+      $("#telefone").mask("+0000000000009")
+      $("#telefone").blur(function (event) { 
+        if ($(this).val().includes('+351')) {
+          $("#telefone").mask("+000 000 000 0009")
+        } else{
+          const numeroTef = $(this).val().length;
+          if ( numeroTef <= 18 && numeroTef != 14) {
+            $("#telefone").mask("+00 (00) 0000-00009")
+          } else {
+            $("#telefone").mask("+00 (00) 00000-0009")
+          }
         }
-      }
-    })
-    // Contador de caracteres
-    $(document).on("input", "#mensagem", function () {
-      const limite = 0;
-      const caracteresDigitados = $(this).val().length;
-      const caracteresRestantes = limite + caracteresDigitados;
-      $(".caracteres").text(caracteresRestantes);
-      mudarCorContador(caracteresRestantes);
+      })
+      // Contador de caracteres
+      $(document).on("input", "#mensagem", function () {
+        const limite = 0;
+        const caracteresDigitados = $(this).val().length;
+        const caracteresRestantes = limite + caracteresDigitados;
+        $(".caracteres").text(caracteresRestantes);
+        mudarCorContador(caracteresRestantes);
+      });
     });
-  });
+  }
+
+  //Animañao plugins - Origamid
+  if(window.SimpleAnime){
+    new SimpleAnime();
+  }
