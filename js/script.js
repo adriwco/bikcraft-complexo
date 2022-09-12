@@ -68,7 +68,7 @@ galeria.forEach(eventosGaleria);
     }
   }
 
-  if(url.includes('pages/contato.html') || url.includes('pages/orcamento.html')){
+  if(url.includes('pages/contato.html')){
     $(document).ready(function(){
       // bloquear o crtl+c crtl+v
       $('input').bind('cut copy paste',function(e) {
