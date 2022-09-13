@@ -8,15 +8,15 @@ function formEnviar(resposta){
     formulario.innerHTML = "<p class='font-2-1' style='grid-column: 1/-1; padding: 1rem;' border-radius: 4px; background: #f7f7f7;><span style='color: #e00000;'>Erro no envio!</span> Você pode enviar diretamente para o nosso email: contato@ficticio.com.br </br> Geralmente respondemos em 24 horas.</p>";
   }
 }
-
-form.addEventListener('submit', function(e){
+function enviarFormulario(e){
   e.preventDefault();
   const btn = document.querySelector('form button');
-  btn.disabled = true;
+  // btn.disabled = true;
   btn.innerHTML = "Enviando...";
   const data = new FormData(form); // classe FormData: pegar o valores do form
   fetch('./enviar.php', { // recebe a url (fazendo conexão,enviando ou puxando dado) e um objeto com as config da conexao
     method: 'POST',
     body: data,
   }).then(formEnviar);
-})
+}
+form.addEventListener('submit', enviarFormulario);
