@@ -9,6 +9,7 @@
 [![Git](https://skills.thijs.gg/icons?i=git)](https://pt.wikipedia.org/wiki/Git)
 [![Figma](https://skills.thijs.gg/icons?i=figma)](https://pt.wikipedia.org/wiki/Figma)
 [![VSCode](https://skills.thijs.gg/icons?i=vscode)](https://pt.wikipedia.org/wiki/Visual_Studio_Code)
+[![PHP](https://skills.thijs.gg/icons?i=php)](https://pt.wikipedia.org/wiki/PHP)
 [![GitHub](https://skills.thijs.gg/icons?i=github)](https://pt.wikipedia.org/wiki/GitHub)
 
 ***
