@@ -97,21 +97,21 @@
         <h2 class="font-1-xs cor-9 col-2">dados pessoais</h2>
         <div>
           <label for="nome">Nome <span class="required">*</span></label>
-          <input type="text" id="nome" name="nome" required>
+          <input type="text" id="nome" maxlength="30" name="nome" required>
         </div>
         <div>
           <label for="sobrenome">Sobrenome</label>
-          <input type="text" id="sobrenome" name="sobrenome">
+          <input type="text" id="sobrenome" maxlength="30" name="sobrenome">
         </div>
 
         <div class="col-2">
           <label for="documento">CPF | NIF <span class="required">*</span></label>
-          <input type="number" id="documento" name="documento" required>
+          <input type="text" id="documento" name="documento" required>
         </div>
 
         <div class="col-2">
           <label for="email">E-mail <span class="required">*</span></label>
-          <input type="email" id="email" name="email" placeholder="contato@email.com" required>
+          <input type="email" id="email" name="email" maxlength="59" placeholder="contato@email.com" required>
         </div>
         <h2 class="font-1-xs cor-9 col-2">entrega</h2>
         <div>
@@ -124,15 +124,15 @@
         </div>
         <div>
           <label for="logradouro">Logradouro</label>
-          <input type="text" id="logradouro" name="logradouro">
+          <input type="text" id="logradouro" maxlength="59" name="logradouro">
         </div>
         <div>
           <label for="bairro">Bairro | Freguesia <span class="required">*</span></label>
-          <input type="text" id="bairro" name="bairro" required>
+          <input type="text" id="bairro" name="bairro" maxlength="30" required>
         </div>
         <div>
           <label for="cidade">Cidade <span class="required">*</span></label>
-          <input type="text" id="cidade" name="cidade" required>
+          <input type="text" id="cidade" maxlength="30" name="cidade" required>
         </div>
         <div>
           <label for="estado">Estado</label>
@@ -191,6 +191,8 @@
     </div>
   </footer>
   <script src="../js/plugins/simple-anime.js"></script>
+  <script src="../js/utils/jquery-3.5.1.min.js"></script>
+  <script src="../js/utils/jquery.mask.min.js"></script>
   <script src="../js/script.js"></script>
   <script src="../js/form.js"></script>
 </body>

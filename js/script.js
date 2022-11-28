@@ -74,7 +74,7 @@ galeria.forEach(eventosGaleria);
       $('input').bind('cut copy paste',function(e) {
           e.preventDefault();
       });
-      // Validaçao formualarioç
+      // Validaçao formualario
       $("#telefone").mask("+0000000000009")
       $("#telefone").blur(function (event) { 
         if ($(this).val().includes('+351')) {
@@ -97,6 +97,27 @@ galeria.forEach(eventosGaleria);
         mudarCorContador(caracteresRestantes);
       });
     });
+  }
+
+  // documento  cep  numero    -    12345-678   1234-567
+  if(url.includes('pages/orcamento.html')){
+    $(document).ready(function(){
+      // bloquear o crtl+c crtl+v
+      $('input').bind('cut copy paste',function(e) {
+          e.preventDefault();
+      });
+      // Validaçao formualario
+      $("#documento").mask("00000-009")
+      $("#documento").blur(function (event) { 
+          const numeroTef = $(this).val().length;
+          if ( numeroTef <= 8) {
+            $("#documento").mask("00000-009")  /// corrigir aqui !!!!
+          } else {
+            $("#documento").mask("0000-0009")
+          }
+      })
+
+    })
   }
 
   //Animañao plugins - Origamid
