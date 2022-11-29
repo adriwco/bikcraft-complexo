@@ -107,16 +107,58 @@ galeria.forEach(eventosGaleria);
           e.preventDefault();
       });
       // Validaçao formualario
-      $("#documento").mask("00000-009")
-      $("#documento").blur(function (event) { 
+      $("#cep").mask("00000-009")
+      $("#cep").blur(function (event) { 
           const numeroTef = $(this).val().length;
-          if ( numeroTef <= 8) {
-            $("#documento").mask("00000-009")  /// corrigir aqui !!!!
+          if ( numeroTef >= 9) {
+            $("#cep").mask("00000-009")  /// corrigir aqui !!!!
           } else {
-            $("#documento").mask("0000-0009")
+            $("#cep").mask("0000-0009")
           }
       })
+      $("#numero").mask("99999");
+    })
+  }
 
+  if(url.includes('pages/orcamento.html')|| url.includes('pages/contato.html') ){
+    $(document).ready(function(){
+      // remove espaço ex: nome
+      // nome
+      const nome = document.querySelector("#nome")
+      $("#nome").blur(function () {
+        const inputString = $("#nome").val().trim();
+        nome.value = inputString;
+      });
+      // sobrenome
+      const sobrenome = document.querySelector("#sobrenome")
+      $("#sobrenome").blur(function () {
+        const inputString = $("#sobrenome").val().trim();
+        sobrenome.value = inputString;
+      });
+      // email
+      const email = document.querySelector("#email")
+      $("#email").blur(function () {
+        const inputString = $("#email").val().trim();
+        email.value = inputString;
+      });
+      // logradouro
+      const logradouro = document.querySelector("#logradouro")
+      $("#logradouro").blur(function () {
+        const inputString = $("#logradouro").val().trim();
+        logradouro.value = inputString;
+      });
+      // bairro/freguesia
+      const bairro = document.querySelector("#bairro")
+      $("#bairro").blur(function () {
+        const inputString = $("#bairro").val().trim();
+        bairro.value = inputString;
+      });
+      // cidade
+      const cidade = document.querySelector("#cidade")
+      $("#cidade").blur(function () {
+        const inputString = $("#cidade").val().trim();
+        cidade.value = inputString;
+      });
     })
   }
 
