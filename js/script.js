@@ -111,12 +111,21 @@ galeria.forEach(eventosGaleria);
       $("#cep").blur(function (event) { 
           const numeroTef = $(this).val().length;
           if ( numeroTef >= 9) {
-            $("#cep").mask("00000-009")  /// corrigir aqui !!!!
+            $("#cep").mask("00000-009")
           } else {
             $("#cep").mask("0000-0009")
           }
       })
       $("#numero").mask("99999");
+      $("#documento").mask("000.000.000-99")
+      $("#documento").blur(function (event) { 
+          const numeroTef = $(this).val().length;
+          if ( numeroTef > 11) {
+            $("#documento").mask("000.000.000-99") 
+          }else{
+            $("#documento").mask("000000000") 
+          }
+      })
     })
   }
 
